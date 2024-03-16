@@ -1,0 +1,16 @@
+// 通用类
+
+.clearfix::after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: '';
+  visibility: hidden;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

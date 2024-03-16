@@ -1,0 +1,28 @@
+$font-regular: 'PingFangSC-Regular', 'Roboto', 'sans-serif';
+$font-medium: 'PingFangSC-Medium', 'Roboto', 'sans-serif';
+$font-light: 'PingFangSC-Light', 'Roboto', 'sans-serif';
+$font-bold: 'PingFangSC-Semibold', 'Roboto', 'sans-serif';
+$font-heavy: 'PingFang-SC-Heavy', 'Roboto', 'sans-serif';
+
+.font-regular {
+  font-family: font-regular;
+  font-weight: normal;
+}
+
+.font-medium {
+  font-family: font-medium;
+  font-weight: 500;
+}
+
+.font-bold {
+  font-family: font-bold;
+  font-weight: bold;
+}
+
+.font-light {
+  font-family: font-light;
+}
+
+.font-heavy {
+  font-family: font-heavy;
+}
