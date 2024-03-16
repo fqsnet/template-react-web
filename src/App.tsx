@@ -2,9 +2,23 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import {useBearStore} from "./store";
 
 function App() {
   const [count, setCount] = useState(0)
+
+  function TestStore() {
+    const bears = useBearStore((state) => state.bears);
+    const increasePopulation = useBearStore((state) => state.increase);
+  
+    return (
+      <div>
+        <h1>{bears} around here...</h1>
+        <button onClick={() => increasePopulation(1)}>Add a bear</button>
+      </div>
+    );
+  }
+  
 
   return (
     <>
@@ -28,6 +42,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      {TestStore()}
     </>
   )
 }
