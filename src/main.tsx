@@ -10,9 +10,3 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 )
 
 
-const a = 1
-
-
-console.log(a);
-
-
