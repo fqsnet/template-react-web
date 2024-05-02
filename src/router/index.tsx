@@ -3,7 +3,7 @@ import React from 'react'
 // import About from '../views/about'
 // import Home from '../views/home'
 
-const News = React.lazy(() => import('../views/news'))
+const News = React.lazy(() => import('@/views/news'))
 
 export const routes = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ export const routes = createBrowserRouter([
   {
     path: '/about',
     lazy: async () => ({
-      Component: (await import('../views/about')).default
+      Component: (await import('@/views/about')).default
     })
   },
   {
