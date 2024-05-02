@@ -1,41 +1,35 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { useBearStore } from "./store";
-import { NavLink, Routes, Route } from "react-router-dom";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import { useBearStore } from './store'
+import { NavLink, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   function TestStore() {
-    const bears = useBearStore((state) => state.bears);
-    const increasePopulation = useBearStore((state) => state.increase);
+    const bears = useBearStore(state => state.bears)
+    const increasePopulation = useBearStore(state => state.increase)
 
     return (
       <div>
         <h1>{bears} around here...</h1>
         <button onClick={() => increasePopulation(1)}>Add a bear</button>
       </div>
-    );
+    )
   }
 
   function Home() {
-    return (
-      <>Home</>
-    )
+    return <>Home</>
   }
 
   function Settings() {
-    return (
-      <>Settings</>
-    )
+    return <>Settings</>
   }
 
   function About() {
-    return (
-      <>About</>
-    )
+    return <>About</>
   }
 
   return (
@@ -50,16 +44,12 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
 
       {TestStore()}
 
@@ -70,9 +60,9 @@ function App() {
         <NavLink to="">首页</NavLink>
         <NavLink
           to={{
-            pathname: "/settings",
-            search: "?sort=date",
-            hash: "#hash",
+            pathname: '/settings',
+            search: '?sort=date',
+            hash: '#hash'
           }}
         >
           产品
@@ -81,14 +71,12 @@ function App() {
       </nav>
 
       <Routes>
-      <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/about" element={<About />} />
-
-
-    </Routes>
+      </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
