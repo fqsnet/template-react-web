@@ -1,15 +1,33 @@
 import { createBrowserRouter } from 'react-router-dom'
-import About from '../views/about'
-import Home from '../views/home'
+import React from 'react'
+// import About from '../views/about'
+// import Home from '../views/home'
+
+const News = React.lazy(() => import('../views/news'))
 
 export const routes = createBrowserRouter([
   {
     path: '/',
-    element: <Home />
+    // element: (
+    //   <React.Suspense fallback={<>111</>}>
+    //     <Home />
+    //   </React.Suspense>
+    // )
+    lazy: () => import('../views/home')
   },
   {
     path: '/about',
-    element: <About />
+    lazy: async () => ({
+      Component: (await import('../views/about')).default
+    })
+  },
+  {
+    path: 'news',
+    element: (
+      <React.Suspense fallback={<>111</>}>
+        <News />
+      </React.Suspense>
+    )
   }
 ])
 

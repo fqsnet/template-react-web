@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [codeInspectorPlugin({ bundler: 'vite' }), react()],
   resolve: {
     alias: {
-      '@/': `${path.resolve(process.cwd(), 'src')}/`
+      '@': path.resolve(__dirname, './src')
     }
   }
 })
