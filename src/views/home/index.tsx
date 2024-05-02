@@ -1,8 +1,6 @@
 import React from 'react'
 
-interface propsType {}
-
-export const Home: React.FC<propsType> = () => {
+export const Home = () => {
   return <div>home111</div>
 }
 
