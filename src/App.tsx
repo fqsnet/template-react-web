@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { useBearStore } from './store'
 import { NavLink, Routes, Route } from 'react-router-dom'
+import Home from './views/home'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,10 +19,6 @@ function App() {
         <button onClick={() => increasePopulation(1)}>Add a bear</button>
       </div>
     )
-  }
-
-  function Home() {
-    return <>Home</>
   }
 
   function Settings() {
