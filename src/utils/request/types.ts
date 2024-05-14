@@ -10,5 +10,5 @@ export interface RequestInterceptors<T> {
 // 自定义传入的参数
 export interface RequestConfig<T = AxiosResponse> extends AxiosRequestConfig {
   interceptors?: RequestInterceptors<T>
-  fullScreenLoading?: boolean
+  loading?: boolean
 }

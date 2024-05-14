@@ -4,6 +4,6 @@ import request from '@/utils/request'
 //   return request({
 //     url: '/user/admin/menu/test',
 //     method: 'GET',
-//     fullScreenLoading: true
+//     loading: true
 //   })
 // }
